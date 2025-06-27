@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Todo list</title>
+</head>
+<body>
+
+<h1>
+    Update form
+</h1>
+    <form method = "post">
+    {% csrf_token %}{{ form.as_p }}
+    <button type = "submit" name = "submit">Update</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List View</title>
+
+</head>
+<body>
+<ul>
+        {%  for todo in  todos%}
+    <li> {{ todo.title }}</li>
+    {%  empty  %}
+    <li> No Data Found</li>
+    {%  endfor  %}
+
+    </ul>
+<a href="{% url 'list' %}">Create new Todo</a>
+</body>
+</html>
