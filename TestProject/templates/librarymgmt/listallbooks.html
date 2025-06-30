@@ -5,6 +5,17 @@
     <title> List all Books</title>
 </head>
 <body>
+<h1>Book List</h1>
+<a href="{% url 'addnewbook' %}">+ Add New Book</a>
+<ul>
+    {% for book in books %}
+        <li>
+            <a href="{% url 'bookdetail' book.pk %}">{{ book.title }}</a> – {{ book.author }}
+            [<a href="{% url 'modifybook' book.pk %}">Edit</a>]
+            [<a href="{% url 'deletebook' book.pk %}">Delete</a>]
+        </li>
+    {% endfor %}
+</ul>
 
 </body>
 </html>

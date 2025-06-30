@@ -5,6 +5,13 @@
     <title>Modify Book Details</title>
 </head>
 <body>
+<h2>{{ view.object.pk|yesno:"Edit Book" }}</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>
+<a href="{% url 'listallbooks' %}">Cancel</a>
 
 </body>
 </html>

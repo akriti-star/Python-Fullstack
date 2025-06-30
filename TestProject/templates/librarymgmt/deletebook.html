@@ -5,6 +5,15 @@
     <title>Delete Book</title>
 </head>
 <body>
+<h2>Delete Book</h2>
+<p>Are you sure you want to delete "{{ object.title }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Yes, Delete</button>
+</form>
+<a href="{% url 'listallbooks' %}">Cancel</a>
+
+
 
 </body>
 </html>

@@ -5,6 +5,11 @@
     <title>Display Book</title>
 </head>
 <body>
+<h2>{{ book.title }}</h2>
+<p><strong>Author:</strong> {{ book.author }}</p>
+<p><strong>Published:</strong> {{ book.published_year }}</p>
+<a href="{% url 'listallbooks' %}">← Back to list</a>
+
 
 </body>
 </html>
