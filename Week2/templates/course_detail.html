@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+<h2>{{ course.title }}</h2>
+<p>{{ course.description }}</p>
+<p><strong>Instructor:</strong> {{ course.instructor_name }}</p>
+<p><strong>Duration:</strong> {{ course.duration }} hours</p>
+<a href="{% url 'course_edit' course.pk %}">Edit</a> |
+<a href="{% url 'course_delete' course.pk %}">Delete</a>
+
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+<h2>{{ patient.name }}</h2>
+<p><strong>Age:</strong> {{ patient.age }}</p>
+<p><strong>Contact:</strong> {{ patient.contact }}</p>
+<p><strong>Diagnosis:</strong> {{ patient.diagnosis }}</p>
+<p><strong>Admitted On:</strong> {{ patient.admission_date }}</p>
+
+<a href="{% url 'patient_edit' patient.pk %}">Edit</a> |
+<a href="{% url 'patient_delete' patient.pk %}">Delete</a> |
+<a href="{% url 'patient_list' %}">Back to List</a>
+
+</body>
+</html>

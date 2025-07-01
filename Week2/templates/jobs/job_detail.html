@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+<h2>{{ job.title }}</h2>
+<p><strong>Company:</strong> {{ job.company }}</p>
+<p><strong>Location:</strong> {{ job.location }}</p>
+<p><strong>Salary:</strong> ₹{{ job.salary }}</p>
+<p>{{ job.description }}</p>
+<a href="{% url 'job_edit' job.pk %}">Edit</a> |
+<a href="{% url 'job_delete' job.pk %}">Delete</a> |
+<a href="{% url 'job_list' %}">Back to Listings</a>
+
+</body>
+</html>

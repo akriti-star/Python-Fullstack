@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+<h2>{{ product.name }}</h2>
+<p>Price: ₹{{ product.price }}</p>
+<p>{{ product.description }}</p>
+<p>Stock: {{ product.stock_quantity }}</p>
+
+<a href="{% url 'product-edit' product.pk %}">Edit</a> |
+<a href="{% url 'product-delete' product.pk %}">Delete</a> |
+<a href="{% url 'product-list' %}">Back to List</a>
+
+
+</body>
+</html>
